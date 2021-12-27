@@ -1,0 +1,312 @@
+.header{
+    background-color: rgba(0, 255, 255, .3);
+    padding: .1rem 0;
+    h1{
+        font-size: 2.5rem;
+        font-family: 'Moo Lah Lah', cursive;
+        font-weight: 900;
+    }
+    a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        font-family: "Lora";
+        font-weight: 500;
+        color: darkgoldenrod;
+        &:hover{
+            color: crimson;
+            font-weight: 700;
+        }
+    }
+}
+
+.main-heading{
+    margin: 2rem 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #71cc5a;
+}
+.english:hover span{
+    display: none;
+}
+.english:hover::after{
+    content: "अभिषेक भट्ट ";
+}
+
+.main-para{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #330cdf;
+    text-align: center;
+}
+
+.about-btn{
+   margin: 4rem 0;
+    .fas{
+        border: 2px solid;
+        padding: 1rem 1.2rem;
+        border-radius: 50%;
+    }
+}
+
+// About Section
+.about-section{
+    padding-top: 2rem;
+    background-color: rgb(14, 13, 13);
+    color: $secondary;
+}
+.about-heading{
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 1rem;
+}
+.about-para{
+    font-size: 1rem;
+    font-family: $font-family-secondary;
+    padding-left: 1rem;
+    font-weight: 100;
+}
+.fade-in-element {
+    animation: fade-in 1.4s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-150px);
+    }
+}
+
+.about-contents{
+    font-family: $font-family-secondary;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: $contact-background;
+    box-shadow: 0px 1px 3px rgba($color: $gray, $alpha: 0.6);
+}
+
+// Contact Section
+.contact-section{    
+    background-color: linear-gradient( rgba(0, 0, 0, 0.9), rgba(12, 12, 12, 0.664) ),url(../media/contact-background-img.jpg);
+    background-color: $primary;
+    // border: 1px solid wheat;
+}
+.large-container{
+    max-width: 1195px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    display: grid;
+    grid-gap: 1rem;
+}
+.item{
+    height: 20vh;
+    border: 2px solid #acaaaa1e;
+    color: white;
+    text-align: center;
+}
+.item1,.item2,.item3,.item4{
+    grid-column: span 3;
+    background-color: $contact-background;
+}
+.contact-heading,.about-heading{
+    color: $secondary;
+    padding: 4rem 0 1.4rem 1rem;
+}
+.contact-contents{
+    font-family: $font-family-secondary;
+    padding: 14px 0 0 10px;
+}
+.contact-contents h5,.about-contents h5{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $gray;
+}
+.contact-contents p,.about-contents p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $secondary;
+}
+.contact-icons a{
+    color: $icon-color;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $contact-background;
+}
+.social-links li a{
+    color: $secondary;
+    margin-right: 0.6rem;
+    &:hover{
+        color: $icon-color;
+    }
+}
+// Table
+form{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: $contact-background;
+    border: 3px solid #acaaaa1e;
+}
+label{
+    font-weight: 600;
+    // color: $secondary;
+    // display: block;
+    // padding: 0.6rem 0;
+}
+input[type=text],input[type=email], select,textarea {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: $font-family-secondary;
+    font-size: 0.8rem;
+    background-color: transparent;
+} 
+
+input[id=subject]{
+    display: block;
+    width: 49%;
+}
+input[id=subject]:focus {
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=submit] {
+    background-color: $dark-green;
+    color: $secondary;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+@keyframes shadow {
+    0% { 
+        box-shadow: 0 0 0 $quaternary;
+    }
+}
+
+.btn-tertiary:hover{
+    animation: shadow 2s infinite;
+    color: yellowgreen;
+    box-shadow: 0 0 0 2em rgba(#fff,0);
+}
+
+// Footer
+.footer{
+    padding: 1rem 0;
+    background-color: $primary;
+    small{
+        color: $gray;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    html{
+        font-size: 10px;
+    }
+    .flex-wrap-mob{
+        flex-wrap: wrap;
+    }
+    .flex-100{
+        flex: 0 1 100%;
+    }
+    .nav-links li a{
+        margin-top: 1rem;
+    }
+
+    .flex-100{
+        justify-content: center;
+        align-items: center;
+    }
+
+    // About Section
+
+    .about-section{
+        padding-top: 5rem;
+    }
+    
+    .about-heading,.about-para,.contact-heading{
+        text-align: center;
+        margin: auto 5rem;
+    }
+    .about-heading{
+        margin-top: 2rem;
+    }
+    .about-contents{
+        flex: 0 1 100%;
+        text-align: center;
+        margin: 1rem 2rem;
+    }
+    
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+            transform: translateY(0px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(-70px);
+        }
+    }
+
+    // Contact Section
+    .contact-section{
+        height: 80vh;
+    }
+
+
+    
+    .form{
+        margin: 1rem 2rem;
+    }
+    .item{
+        grid-column: 1 / -1;
+        margin: 0 2rem;
+        height: 6rem;
+    }
+    label{
+        text-align: center;
+    }
+    input[id=subject]{
+        width: 100%;
+    }
+    .form-elements{
+        text-align: center;
+    }
+
+    .footer{
+        margin-top: -10rem;
+    }
+
+    .blog{
+        margin-top: 2rem;
+    }
+
+    .blog-foot{
+        margin-top: 0rem;
+    }
+
+}

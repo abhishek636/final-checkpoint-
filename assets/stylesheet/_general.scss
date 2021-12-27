@@ -1,0 +1,108 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+html{
+    font-size: 1.4rem;
+}
+body{
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: $font-family;
+}
+
+.body{
+    background-image: url(../images/about/a01.jpg);
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.tac{
+    text-align: center;
+}
+.tal{
+    text-align: left;
+}
+.font-0{
+    font-size: 0;
+}
+.section-padding{
+    padding: 2rem 0;
+}
+.display-none{
+    display: none;
+}
+// Flex
+.flex{
+    display: flex;
+}
+.jsb{
+    justify-content: space-between;
+}
+.jse{
+    justify-content: space-evenly;
+}
+.jcc{
+    justify-content: center;
+}
+.jcs{
+    justify-content: start;
+}
+.jcl{
+    justify-content: left;
+}
+.aic{
+    align-items: center;
+}
+.ais{
+    align-items: stretch;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-25{
+    flex: 0 1 25%;
+    // border: 1px solid gold;
+}
+.flex-80{
+    flex: 0 1 80%;
+    // border: 1px solid gold;
+}
+.flex-49{
+    flex: 0 1 49%;
+    // border: 1px solid gold;
+}
+.flex-60{
+    flex: 0 1 60%;
+    // border: 1px solid gold;
+}
+.flex-70{
+    flex: 0 1 70%;
+    // border: 1px solid gold;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    // border: 1px solid white;
+}
